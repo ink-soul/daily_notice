@@ -74,13 +74,13 @@ ps. 有一些注意事项在此补充
 1. 首先clone本仓库：
 
 ```bash
-git clone https://github.com/ink-soul/daily_morning.git
+git clone https://github.com/ink-soul/daily_notice.git
 ```
 
 2. 安装依赖：
 
 ```bash
-cd daily_morning
+cd daily_notice
 
 pip3 install -r requirements.txt
 ```
