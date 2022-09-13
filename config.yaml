@@ -1,0 +1,102 @@
+# 配置文件
+
+DAILY_TIME: "07:00" # 每日定时发送时间。该时间为系统时间，如果当前系统时间不为北京时间需要自行进行换算
+
+START_DATE: "2020-05-20" # 纪念日
+CITY: "上海" #天气城市
+
+BIRTHDAY:
+  - "05-21"
+
+APP_ID: "微信公众平台的 APP ID" 
+APP_SECRET: "微信公众平台的 APP SECRET" 
+
+USER_ID: 
+  - "微信公众平台的 USER ID"  
+  - "USER ID 2" # 你可以通过配置多个USER_ID来设置多个接受者，如果接受者只有一人删除本行即可
+TEMPLATE_ID: "微信公众平台的 TEMPLATE ID"  
+
+
+# 配置课程表
+# 公众号测试平台上的模板变量为 {{timetable.DATA}}
+# TODO: 根据法定节假日自动安排相关补课，若学校自己安排则无法准确排布，（可尝试用户发送信息进行更改）
+
+TIMETABLE_ENABLED: False # 设置课程表功能是否启用，True为开启，False为关闭
+TOTAL_NUMBER_OF_WEEKS: "16" #这学期的总周数
+START_DATE_OF_THIS_SEMESTER: "09-01" #本学期开学日期,建议为开始上课的日期
+WORDS_NO_CLASS_TODAY: "今天没有课哦，好好休息吧" # 今日无课时的文字
+
+
+
+MONDAY: #周一
+  -
+  # 有课情况下的示例，添加更多课程可复制下面的结构在末尾粘贴并改动对应的值
+    TIME: "8:00-9:45" # 课程上下课时间
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "3" # 单双周标志符，"1"表示单周，"2"表示双周，"3"表示每周，这个属性不会出现在公众号推送的内容中
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束" 
+  -
+    TIME: "8:00-9:45" # 课程上下课时间
+    CLASSNAME: "操作系统" # 课程名
+    CLASSROOM: "主C3机房4" # 教室
+    SINGLE_BI_WEEK_MARK: "3" # 单双周标志符，"1"表示单周，"2"表示双周，"3"表示每周，这个属性不会出现在公众号推送的内容中
+    START_WEEK: "1" # 在第几周开始
+    END_WEEK: "16" # 在第几周结束
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "3"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"  
+  # 如下周二周三，若无课可直接留空
+TUESDAY: #周二
+THIRSDAY: #周三
+THURSDAY: #周四
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "1"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"
+FRIDAY: #周五
+SATURDAY: #周六
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "2"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "1"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"
+SUNDAY: #周日
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "1"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"
+  -
+    TIME: "课程上下课时间"  
+    CLASSNAME: "课程名"  
+    CLASSROOM: "教室"  
+    SINGLE_BI_WEEK_MARK: "1"
+    START_WEEK: "在第几周开始" 
+    END_WEEK: "在第几周结束"
+
+    
+    
+
+
+
+
