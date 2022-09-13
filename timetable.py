@@ -47,7 +47,7 @@ def get_num_of_week_now(nowtime,today,start_date_of_this_semester):
 # 根据当前日期，获取当天课表
 def get_classes_today(timetable_enabled,words_no_class_today,nowtime,today,start_date_of_this_semester):
   if timetable_enabled == True :
-    if is_holiday == True :
+    if is_holiday(today) == True :
       return words_no_class_today
     week_list = ["MONDAY","TUESDAY","THIRSDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"]
     week_today = week_list[datetime.date(today).weekday()]
